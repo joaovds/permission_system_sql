@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: bitnami/postgresql:17.3.0
+    container_name: postgresql
+    restart: always
+    environment:
+      POSTGRESQL_USERNAME: postgres
+      POSTGRESQL_PASSWORD: postgres
+      POSTGRESQL_DATABASE: permissions_poc
+    ports:
+      - '5432:5432'
